@@ -45,3 +45,6 @@ window.signup = function (e) {
     alert("password does not match");
   }
 };
+window.addEventListener("popstate", function (event) {
+  location.reload();
+});

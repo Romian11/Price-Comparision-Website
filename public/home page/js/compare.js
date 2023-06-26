@@ -96,7 +96,9 @@ function return_home() {
 //   amazonButton.style.width = "120px";
 //   btn_img1.style.display = "none";
 // });
-
+window.addEventListener('popstate', function(event) {
+  location.reload();
+});
 function opensite(url) {
   if (url == "") return;
   window.open(url);

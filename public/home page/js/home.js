@@ -30,7 +30,9 @@ function login() {
   }
 }
 login();
-
+window.addEventListener('popstate', function(event) {
+  location.reload();
+});
 logout_btn.addEventListener("click", ()=>{
   localStorage.removeItem("login_info");
   
