@@ -5,7 +5,7 @@ const hbs = require("hbs");
 const path = require("path");
 const app = express();
 const fs = require("fs");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 const { URL } = require("url");
 const querystring = require("querystring");
 
@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
               ? title2
               : title3;
             const title = productTitle;
-
+            
             const price = $(element).find('div[class*="_30jeq3"]').text();
             const image = $(element).find("img[src]").attr("src");
             const rating = $(element).find('div[class*="_3LWZlK"]').text();

@@ -30,17 +30,17 @@ function login() {
   }
 }
 login();
-window.addEventListener('popstate', function(event) {
+window.addEventListener("popstate", function (event) {
   location.reload();
 });
-logout_btn.addEventListener("click", ()=>{
+logout_btn.addEventListener("click", () => {
   localStorage.removeItem("login_info");
-  
-    signup_btn.style.display = "block";
-    login_btn.style.display = "block";
-    logout_btn.style.display = "none";
-    // location.reload();
-})
+
+  signup_btn.style.display = "block";
+  login_btn.style.display = "block";
+  logout_btn.style.display = "none";
+  // location.reload();
+});
 signup_btn.addEventListener("click", () => {
   window.location = "/signup";
 });
